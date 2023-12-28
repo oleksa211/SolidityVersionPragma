@@ -1,19 +1,10 @@
-// SPDX-License-Identifier: MIT
-// The above line specifies the license for the smart contract
-
-// Solidity version pragma
 pragma solidity ^0.8.0;
 
 // Contract declaration
 contract SimpleContract {
-    // State variable to store a string
-    string public greeting;
-
-    // Event emitted when the greeting is updated
-    event GreetingUpdated(string newGreeting);
-
-    // Address of the contract owner
-    address public owner;
+    string public greeting;     // State variable to store a string
+    event GreetingUpdated(string newGreeting); // Event emitted when the greeting is updated
+    address public owner;  // Address of the contract owner
 
     // Modifier to ensure that only the owner can call certain functions
     modifier onlyOwner() {
@@ -23,8 +14,7 @@ contract SimpleContract {
 
     // Constructor function, called once during deployment
     constructor() {
-        // Initialize the greeting and set the contract owner
-        greeting = "Hello, World!";
+        greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
         owner = msg.sender;
     }
 
