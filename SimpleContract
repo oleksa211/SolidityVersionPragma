@@ -1,24 +1,20 @@
 pragma solidity ^0.8.0;
 
-// Contract declaration
 contract SimpleContract {
     string public greeting;     // State variable to store a string
     event GreetingUpdated(string newGreeting); // Event emitted when the greeting is updated
     address public owner;  // Address of the contract owner
 
-    // Modifier to ensure that only the owner can call certain functions
     modifier onlyOwner() {
         require(msg.sender == owner, "You are not the owner");
         _;
     }
 
-    // Constructor function, called once during deployment
     constructor() {
         greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
         owner = msg.sender;
     }
 
-    // Function to update the greeting (only callable by the owner)
     function updateGreeting(string memory _newGreeting) public onlyOwner {
         // Update the greeting
         greeting = _newGreeting;
