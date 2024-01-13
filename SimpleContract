@@ -23,9 +23,7 @@ contract SimpleContract {
         emit GreetingUpdated(_newGreeting);
     }
 
-    // Function to get the current greeting
     function getGreeting() public view returns (string memory) {
-        // Return the current greeting
         return greeting;
     }
 }
