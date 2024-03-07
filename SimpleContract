@@ -9,11 +9,11 @@ contract SimpleContract {
         require(msg.sender == owner, "You are not the owner");
         _;
     }
-
-    constructor() {
-        greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
-        owner = msg.sender;
-    }
+#
+#    constructor() {
+#        greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
+#        owner = msg.sender;
+#    }
 
     function updateGreeting(string memory _newGreeting) public onlyOwner {
         // Update the greeting
