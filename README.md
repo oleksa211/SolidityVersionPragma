@@ -1,1 +1,1 @@
-# SolidityVersionPragma
+###### SolidityVersionPragma ######
