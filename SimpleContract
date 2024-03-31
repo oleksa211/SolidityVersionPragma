@@ -10,7 +10,7 @@ contract SimpleContract {
         _;
     }
 
-    constructor() {
+    constructor2() {
         greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
         owner = msg.sender;
     }
