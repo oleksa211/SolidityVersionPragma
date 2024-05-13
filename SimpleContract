@@ -1,6 +1,6 @@
 pragma solidity ^0.8.1;
 
-contract SimpleContract {
+contract SimpleContract2 {
     string public greeting;     // State variable to store a string
     event GreetingUpdated(string newGreeting); // Event emitted when the greeting is updated
     address public owner;  // Address of the contract owner
