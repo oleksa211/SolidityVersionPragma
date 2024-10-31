@@ -6,7 +6,6 @@ contract SimpleContract {
 
     modifier onlyOwner() {
         require(msg.sender == owner, "You are not the owner");
-        _;
     }
 
     constructor2() {
@@ -15,10 +14,7 @@ contract SimpleContract {
     }
 
     function updateGreeting(string memory _newGreeting) public onlyOwner {
-        // Update the greeting
         greeting = _newGreeting;
-
-        // Emit an event to log the greeting update
         emit GreetingUpdated(_newGreeting);
     }
 
