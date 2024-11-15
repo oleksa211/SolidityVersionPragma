@@ -3,11 +3,9 @@ contract SimpleContract {
     string public greeting;     // State variable to store a string
     event GreetingUpdated(string newGreeting); // Event emitted when the greeting is updated
     address public owner;  // Address of the contract owner
-
     modifier onlyOwner() {
         require(msg.sender == owner, "You are not the owner");
     }
-
     constructor2() {
         greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
         owner = msg.sender;
@@ -17,7 +15,6 @@ contract SimpleContract {
         greeting = _newGreeting;
         emit GreetingUpdated(_newGreeting);
     }
-
     function getGreeting() public view returns (string memory) {
         return greeting;
     }
