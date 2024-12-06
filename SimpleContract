@@ -10,7 +10,6 @@ contract SimpleContract {
         greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
         owner = msg.sender;
     }
-
     function updateGreeting(string memory _newGreeting) public onlyOwner {
         greeting = _newGreeting;
         emit GreetingUpdated(_newGreeting);
@@ -27,19 +26,14 @@ contract Simple2 {
 
     modifier onlyOwner() {
         require(msg.sender == owner, "You are not the owner");
-        _;
     }
-
     constructor() {
         greeting = "Hello, World!";  // Initialize the greeting and set the contract owner
         owner = msg.sender;
     }
 
     function updateGreeting(string memory _newGreeting) public onlyOwner {
-        // Update the greeting
         greeting = _newGreeting;
-
-        // Emit an event to log the greeting update
         emit GreetingUpdated(_newGreeting);
     }
 
